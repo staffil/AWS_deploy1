@@ -17,7 +17,7 @@ class HomecontrollerTest {
     @Test
     void hello(){
         ResponseEntity<String> response = restTemplate.getForEntity("/aws/v1", String.class);
-        assertEquals("<h1>AWS 배포 v1</h1>",response.getBody());
+        assertEquals("<h1>AWS 배포 v1.1</h1>",response.getBody());
         // 하나의 문자가 틀려도 실패 했다고 뜸
     }
 
