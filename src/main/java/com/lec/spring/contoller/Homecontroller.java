@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController // 바디를 리턴하는 것 (responsbody + controller)
 public class Homecontroller {
 
-    @GetMapping("/aws/v1")
+    @GetMapping("/aws/v2")
     public String hello (@RequestParam(defaultValue ="1")  Integer num) {
         if(num ==1) {
-            log.info("/aws/v1/ 호출. info 로그🙌");
+            log.info("/aws/v2/ 호출. info 로그🙌");
         }else if (num == -1){
-            log.error("/aws/vi 호출 errror 로그😒");
+            log.error("/aws/v2 호출 errror 로그😒");
         }else if (num == 0){
-            log.warn("/aws/v1 호출 경고 로그🤣");
+            log.warn("/aws/v2 호출 경고 로그🤣");
         }
-        return "<h1>AWS 배포 v1.1</h1>";
+        return "<h1>AWS 배포 v1.2</h1>";
         // 디버깅을 할때 어떤게 오류 나야 하는지 알아야 하기 때문에
     }
 
